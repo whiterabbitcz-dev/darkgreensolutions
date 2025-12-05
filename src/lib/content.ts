@@ -65,6 +65,7 @@ export interface FooterData {
 export interface HomePageData {
   title: string;
   description: string;
+  logo?: string;
   hero: HeroData;
   themes: ThemesData;
   about: AboutData;

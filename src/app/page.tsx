@@ -173,18 +173,21 @@ export default function Home() {
                   {member.name}
                 </h3>
 
-                {/* Photo */}
+                {/* Photo - portrait aspect ratio like in reference */}
                 <div className="mb-5">
                   <div
-                    className="w-44 h-44 md:w-52 md:h-52 rounded-xl overflow-hidden"
-                    style={{ backgroundColor: "#6D28D9" }}
+                    className="w-36 md:w-44 rounded-lg overflow-hidden"
+                    style={{ 
+                      backgroundColor: "#6D28D9",
+                      aspectRatio: "3/4"
+                    }}
                   >
                     <Image
                       src={member.image}
                       alt={member.name}
-                      width={208}
-                      height={208}
-                      className="w-full h-full object-cover"
+                      width={176}
+                      height={235}
+                      className="w-full h-full object-cover object-top"
                       unoptimized
                     />
                   </div>

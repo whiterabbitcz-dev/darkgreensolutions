@@ -2,6 +2,8 @@
 title: "DarkGreen Solutions"
 description: "Technologie a postupy pro udržitelné podnikání"
 
+logo: "/images/logo.jpg"
+
 hero:
   title: "Technologie a postupy pro udržitelné podnikání"
 
@@ -32,10 +34,10 @@ consultants:
   title: "Poznejte naše konzultanty"
   members:
     - name: "Jaroslav Smrčka"
-      image: "/images/jaroslav.jpg"
+      image: "/images/jaroslavsmrcka.png"
       bio: "Jaroslav se posledních 20 let věnoval rozvoji podnikání a obchodu v mezinárodních společnostech. Začínal na manažerských pozicích ve firmě Coca-cola, později ve vedoucích obchodních pozicích Fintechových společností First Data a Fiserv. Poslední rok se podílel na přípravě ESG reportingu a strategií udržitelnosti pro klienty společnosti Fair Venture. Vystudoval obor Management a Marketing na FTVS UK a studuje Hydrologii na Fakultě životního prostředí ČZU."
     - name: "Jan Baláč"
-      image: "/images/jan.jpg"
+      image: "/images/janbalac.png"
       bio: "Má přes 15 let zkušeností v poradenství, rozvoji podnikání a řízení organizací. Dlouhodobě se věnuje tématům obnovitelných zdrojů energie, energetických úspor a zavádění čistých technologií. Pracoval na manažerských pozicích ve Skupině ČEZ, neziskovém sektoru i státní správě a v poradenské roli pro velké energetické i výrobní společnosti, investiční fondy, neziskové organizace a obce. Přes dva roky se věnoval přípravě na ESG reporting a strategiím udržitelnosti pro přední české společnosti jako seniorní konzultant ve firmě Fair Venture. Vystudoval obor ekonomie a politologie na London School of Economics a obor Technology Policy na University of Cambridge."
 
 footer:
