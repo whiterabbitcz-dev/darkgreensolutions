@@ -1,5 +1,18 @@
 @import "tailwindcss";
 
+/* Tailwind v4 custom theme */
+@theme {
+  /* Brand colors */
+  --color-brand-lime: #9EF01A;
+  --color-brand-purple: #7C3AED;
+  --color-brand-violet: #6D28D9;
+  --color-brand-dark: #0D0D0D;
+  --color-brand-black: #000000;
+  
+  /* Font family */
+  --font-sans: "Inter", system-ui, sans-serif;
+}
+
 :root {
   --font-inter: "Inter", system-ui, sans-serif;
 }

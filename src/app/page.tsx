@@ -5,9 +5,12 @@ export default function Home() {
   const content = getHomePageContent();
 
   return (
-    <div className="min-h-screen bg-white">
+    <div className="min-h-screen" style={{ backgroundColor: "#ffffff" }}>
       {/* Navigation */}
-      <nav className="fixed top-0 left-0 right-0 z-50 bg-brand-dark">
+      <nav
+        className="fixed top-0 left-0 right-0 z-50"
+        style={{ backgroundColor: "#0D0D0D" }}
+      >
         <div className="max-w-7xl mx-auto px-6 lg:px-8">
           <div className="flex items-center justify-between h-14">
             {/* Logo */}
@@ -21,7 +24,9 @@ export default function Home() {
               </svg>
               <div className="leading-tight">
                 <span className="text-white font-semibold text-sm block">DarkGreen</span>
-                <span className="text-white/60 font-normal text-[10px] block -mt-0.5">Solutions</span>
+                <span className="text-white/60 font-normal text-[10px] block -mt-0.5">
+                  Solutions
+                </span>
               </div>
             </a>
 
@@ -42,12 +47,16 @@ export default function Home() {
       </nav>
 
       {/* Hero Section */}
-      <section className="relative bg-brand-dark pt-14 overflow-hidden">
-        {/* Gradient overlay - positioned to match screenshot */}
+      <section
+        className="relative pt-14 overflow-hidden"
+        style={{ backgroundColor: "#0D0D0D" }}
+      >
+        {/* Gradient overlay - purple to lime green */}
         <div
-          className="absolute top-0 left-0 w-[60%] h-full"
+          className="absolute top-0 left-0 w-[65%] h-full"
           style={{
-            background: "linear-gradient(160deg, rgba(124, 58, 237, 0.9) 0%, rgba(158, 240, 26, 0.7) 70%, transparent 100%)",
+            background:
+              "linear-gradient(145deg, rgba(124, 58, 237, 0.95) 0%, rgba(158, 240, 26, 0.8) 60%, transparent 100%)",
           }}
         />
 
@@ -59,10 +68,13 @@ export default function Home() {
       </section>
 
       {/* Naše Témata Section */}
-      <section className="bg-gray-100 py-14 lg:py-16">
+      <section className="py-14 lg:py-16" style={{ backgroundColor: "#F5F5F5" }}>
         <div className="max-w-7xl mx-auto px-6 lg:px-8">
           {/* Section Label */}
-          <p className="text-brand-purple text-[11px] font-semibold tracking-[0.2em] uppercase mb-8">
+          <p
+            className="text-[11px] font-semibold tracking-[0.2em] uppercase mb-8"
+            style={{ color: "#7C3AED" }}
+          >
             {content.themes.sectionLabel}
           </p>
 
@@ -80,10 +92,15 @@ export default function Home() {
                   />
                 )}
                 <div className={index === 0 ? "pl-5" : ""}>
-                  <h3 className="text-[26px] md:text-[30px] font-bold text-brand-dark mb-3">
+                  <h3
+                    className="text-[26px] md:text-[30px] font-bold mb-3"
+                    style={{ color: "#0D0D0D" }}
+                  >
                     {item.title}
                   </h3>
-                  <p className="text-gray-600 text-[15px] leading-relaxed">{item.text}</p>
+                  <p className="text-[15px] leading-relaxed" style={{ color: "#525252" }}>
+                    {item.text}
+                  </p>
                 </div>
               </div>
             ))}
@@ -92,38 +109,52 @@ export default function Home() {
       </section>
 
       {/* O DarkGreen Solutions Section */}
-      <section className="bg-white py-14 lg:py-16 border-t border-gray-200">
+      <section
+        className="py-14 lg:py-16"
+        style={{ backgroundColor: "#ffffff", borderTop: "1px solid #E5E5E5" }}
+      >
         <div className="max-w-7xl mx-auto px-6 lg:px-8">
           {/* Section Label */}
-          <p className="text-gray-400 text-[11px] font-medium tracking-[0.15em] uppercase mb-5">
+          <p
+            className="text-[11px] font-medium tracking-[0.15em] uppercase mb-5"
+            style={{ color: "#A3A3A3" }}
+          >
             {content.about.sectionLabel}
           </p>
 
           {/* Main Heading */}
-          <h2 className="text-[28px] md:text-[36px] lg:text-[40px] font-bold text-brand-dark leading-tight mb-6 max-w-2xl">
+          <h2
+            className="text-[28px] md:text-[36px] lg:text-[40px] font-bold leading-tight mb-6 max-w-2xl"
+            style={{ color: "#0D0D0D" }}
+          >
             {content.about.title}
           </h2>
 
           {/* Paragraphs */}
           <div className="max-w-3xl">
-            <p className="text-gray-700 text-[15px] leading-[1.7] mb-4">
+            <p className="text-[15px] leading-[1.7] mb-4" style={{ color: "#404040" }}>
               <span className="font-semibold">Máme nadhled, zkušenosti a tah na branku.</span>{" "}
               Naše práce je nejen o reportech, ale především o strategii, která vám přinese
-              měřitelné výsledky a zajistí, že ESG nebude jen povinností, ale konkurenční výhodou.
+              měřitelné výsledky a zajistí, že ESG nebude jen povinností, ale konkurenční
+              výhodou.
             </p>
-            <p className="text-gray-700 text-[15px] leading-[1.7]">
-              <span className="font-semibold underline decoration-brand-purple decoration-2 underline-offset-4">
+            <p className="text-[15px] leading-[1.7]" style={{ color: "#404040" }}>
+              <span
+                className="font-semibold underline underline-offset-4"
+                style={{ textDecorationColor: "#7C3AED", textDecorationThickness: "2px" }}
+              >
                 Hledáme rovnováhu mezi inovacemi a pragmatickým přístupem.
               </span>{" "}
               Chceme, aby ESG a dekarbonizace dávaly{" "}
-              <span className="font-semibold">smysl byznysově, environmentálně i společensky</span>.
+              <span className="font-semibold">smysl byznysově, environmentálně i společensky</span>
+              .
             </p>
           </div>
         </div>
       </section>
 
       {/* Konzultanti Section */}
-      <section className="bg-brand-purple py-14 lg:py-16">
+      <section className="py-14 lg:py-16" style={{ backgroundColor: "#7C3AED" }}>
         <div className="max-w-7xl mx-auto px-6 lg:px-8">
           {/* Section Title */}
           <h2 className="text-white text-[24px] md:text-[28px] font-bold mb-10 text-center">
@@ -135,13 +166,19 @@ export default function Home() {
             {content.consultants.members.map((member, index) => (
               <div key={index}>
                 {/* Name */}
-                <h3 className="text-brand-lime text-[22px] md:text-[26px] font-bold mb-4">
+                <h3
+                  className="text-[22px] md:text-[26px] font-bold mb-4"
+                  style={{ color: "#9EF01A" }}
+                >
                   {member.name}
                 </h3>
 
                 {/* Photo */}
                 <div className="mb-5">
-                  <div className="w-44 h-44 md:w-52 md:h-52 rounded-xl overflow-hidden bg-gray-400">
+                  <div
+                    className="w-44 h-44 md:w-52 md:h-52 rounded-xl overflow-hidden"
+                    style={{ backgroundColor: "#6D28D9" }}
+                  >
                     <Image
                       src={member.image}
                       alt={member.name}
@@ -154,7 +191,9 @@ export default function Home() {
                 </div>
 
                 {/* Bio */}
-                <p className="text-white/90 text-[14px] leading-[1.7] max-w-3xl">{member.bio}</p>
+                <p className="text-[14px] leading-[1.7] max-w-3xl text-white/90">
+                  {member.bio}
+                </p>
               </div>
             ))}
           </div>
@@ -162,7 +201,7 @@ export default function Home() {
       </section>
 
       {/* Footer */}
-      <footer className="bg-brand-dark pt-10 pb-0">
+      <footer style={{ backgroundColor: "#0D0D0D" }} className="pt-10 pb-0">
         <div className="max-w-7xl mx-auto px-6 lg:px-8">
           <div className="grid md:grid-cols-3 gap-8 pb-10">
             {/* Logo */}
@@ -177,14 +216,16 @@ export default function Home() {
                 </svg>
                 <div className="leading-tight">
                   <span className="text-white font-semibold text-sm block">DarkGreen</span>
-                  <span className="text-white/60 font-normal text-[10px] block -mt-0.5">Solutions</span>
+                  <span className="text-white/60 font-normal text-[10px] block -mt-0.5">
+                    Solutions
+                  </span>
                 </div>
               </a>
             </div>
 
             {/* Contact */}
             <div>
-              <h4 className="text-brand-lime font-semibold text-[13px] mb-3">
+              <h4 className="font-semibold text-[13px] mb-3" style={{ color: "#9EF01A" }}>
                 {content.footer.contact.title}
               </h4>
               <div className="text-white/60 text-[13px] space-y-0.5">
@@ -196,7 +237,7 @@ export default function Home() {
 
             {/* Billing */}
             <div>
-              <h4 className="text-brand-lime font-semibold text-[13px] mb-3">
+              <h4 className="font-semibold text-[13px] mb-3" style={{ color: "#9EF01A" }}>
                 {content.footer.billing.title}
               </h4>
               <div className="text-white/60 text-[13px] space-y-0.5">
@@ -211,10 +252,15 @@ export default function Home() {
 
         {/* Copyright bar with purple accent */}
         <div className="relative">
-          <div className="absolute top-0 left-0 right-0 h-0.5 bg-brand-purple" />
-          <div className="bg-brand-dark py-3">
+          <div
+            className="absolute top-0 left-0 right-0 h-0.5"
+            style={{ backgroundColor: "#7C3AED" }}
+          />
+          <div className="py-3" style={{ backgroundColor: "#0D0D0D" }}>
             <div className="max-w-7xl mx-auto px-6 lg:px-8">
-              <p className="text-white/40 text-[11px] text-center">{content.footer.copyright}</p>
+              <p className="text-white/40 text-[11px] text-center">
+                {content.footer.copyright}
+              </p>
             </div>
           </div>
         </div>
