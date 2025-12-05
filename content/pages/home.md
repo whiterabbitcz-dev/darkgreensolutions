@@ -1,84 +1,54 @@
 ---
 title: "DarkGreen Solutions"
-description: "V Dark Green Solutions vás efektivně provedeme ESG reportingem a výpočtem uhlíkové stopy."
+description: "Technologie a postupy pro udržitelné podnikání"
 
 hero:
-  title: "Udržitelné podnikání začíná s námi"
-  subtitle: "V Dark Green Solutions vás efektivně provedeme ESG reportingem a výpočtem uhlíkové stopy. Nabízíme data-driven řešení, která minimalizují rizika a odhalují příležitosti pro udržitelný růst vašeho podnikání."
-  image: "/images/hero-bg.jpg"
-  ctaText: "Kontaktujte nás"
-  ctaLink: "#kontakt"
+  title: "Technologie a postupy pro udržitelné podnikání"
+
+themes:
+  sectionLabel: "NAŠE TÉMATA"
+  items:
+    - title: "Dekarbonizace"
+      text: "Navrhneme a spočítáme cestu k dekarbonizaci vašeho podnikání."
+    - title: "ESG"
+      text: "Nastavíme vaše procesy a reporting dle principů esg tak, aby jste uspěli u vašich zákazníků, investorů, auditorů i ostatních stakeholderů."
 
 about:
-  title: "O nás"
-  text: "Jsme tým zkušených odborníků na udržitelnost a ESG reporting. Pomáháme firmám orientovat se v komplexním světě environmentálních, sociálních a governance požadavků. Naše služby jsou založeny na datech a nejnovějších metodologiích, které vám pomohou nejen splnit regulatorní požadavky, ale také identifikovat příležitosti pro udržitelný růst."
-  image: "/images/about.jpg"
+  sectionLabel: "O DARKGREEN SOLUTIONS"
+  title: "Propojujeme technologie, byznys a společnost."
+  paragraphs:
+    - text: "Máme nadhled, zkušenosti a tah na branku."
+      bold: true
+    - text: "Naše práce je nejen o reportech, ale především o strategii, která vám přinese měřitelné výsledky a zajistí, že ESG nebude jen povinností, ale konkurenční výhodou."
+      bold: false
+    - text: "Hledáme rovnováhu mezi inovacemi a pragmatickým přístupem."
+      bold: true
+      underline: true
+    - text: "Chceme, aby ESG a dekarbonizace dávaly smysl byznysově, environmentálně i společensky."
+      bold: false
+      boldWords: ["smysl byznysově, environmentálně i společensky"]
 
-workflow:
-  title: "Jak pracujeme"
-  subtitle: "Náš osvědčený proces vás provede od analýzy až po implementaci"
-  steps:
-    - title: "Analýza"
-      description: "Detailní posouzení vašeho současného stavu a identifikace klíčových oblastí pro zlepšení."
-      icon: "search"
-    - title: "Strategie"
-      description: "Vytvoření komplexní ESG strategie přizpůsobené vašim specifickým potřebám a cílům."
-      icon: "target"
-    - title: "Implementace"
-      description: "Realizace navržených opatření s průběžným sledováním pokroku a výsledků."
-      icon: "rocket"
-    - title: "Reporting"
-      description: "Příprava profesionálních reportů splňujících nejnovější standardy a regulatorní požadavky."
-      icon: "file-text"
-
-services:
-  title: "Služby"
-  subtitle: "Komplexní řešení pro vaši udržitelnou budoucnost"
-  items:
-    - title: "ESG Reporting"
-      text: "Profesionální příprava ESG reportů podle nejnovějších standardů (GRI, SASB, TCFD). Pomůžeme vám transparentně komunikovat vaše úsilí o udržitelnost stakeholderům."
-      icon: "bar-chart"
-    - title: "Výpočet uhlíkové stopy"
-      text: "Přesný výpočet emisí skleníkových plynů (Scope 1, 2 i 3) s využitím certifikovaných metodologií. Identifikujeme hlavní zdroje emisí a navrhneme opatření pro jejich snížení."
-      icon: "leaf"
-    - title: "Strategické poradenství"
-      text: "Vydejte se na transformační cestu s našimi strategickými poradenskými službami. Naši zkušení odborníci vám pomohou strategicky sladit vaše podnikání s trajektorií udržitelného růstu."
-      icon: "compass"
-    - title: "Compliance & regulace"
-      text: "Navigace v komplexním prostředí ESG regulací a standardů. Zajistíme, že vaše podnikání splňuje všechny relevantní požadavky a je připraveno na budoucí změny."
-      icon: "shield-check"
-
-team:
-  title: "Náš tým"
-  subtitle: "Máme dynamický a zkušený tým"
-  description: "Náš tým tvoří odborníci s mnohaletými zkušenostmi v oblasti udržitelnosti, financí a strategického poradenství. Společně vám pomůžeme dosáhnout vašich ESG cílů."
+consultants:
+  title: "Poznejte naše konzultanty"
   members:
-    - name: "Jan Novák"
-      role: "CEO & Founder"
-      image: "/images/team/jan.jpg"
-    - name: "Marie Svobodová"
-      role: "ESG Director"
-      image: "/images/team/marie.jpg"
-    - name: "Petr Dvořák"
-      role: "Senior Consultant"
-      image: "/images/team/petr.jpg"
-
-contact:
-  title: "Kontakt"
-  subtitle: "Máte otázky? Rádi vám pomůžeme."
-  email: "info@darkgreensolutions.cz"
-  phone: "+420 123 456 789"
-  address: "Praha, Česká republika"
-  formTitle: "Napište nám"
+    - name: "Jaroslav Smrčka"
+      image: "/images/jaroslav.jpg"
+      bio: "Jaroslav se posledních 20 let věnoval rozvoji podnikání a obchodu v mezinárodních společnostech. Začínal na manažerských pozicích ve firmě Coca-cola, později ve vedoucích obchodních pozicích Fintechových společností First Data a Fiserv. Poslední rok se podílel na přípravě ESG reportingu a strategií udržitelnosti pro klienty společnosti Fair Venture. Vystudoval obor Management a Marketing na FTVS UK a studuje Hydrologii na Fakultě životního prostředí ČZU."
+    - name: "Jan Baláč"
+      image: "/images/jan.jpg"
+      bio: "Má přes 15 let zkušeností v poradenství, rozvoji podnikání a řízení organizací. Dlouhodobě se věnuje tématům obnovitelných zdrojů energie, energetických úspor a zavádění čistých technologií. Pracoval na manažerských pozicích ve Skupině ČEZ, neziskovém sektoru i státní správě a v poradenské roli pro velké energetické i výrobní společnosti, investiční fondy, neziskové organizace a obce. Přes dva roky se věnoval přípravě na ESG reporting a strategiím udržitelnosti pro přední české společnosti jako seniorní konzultant ve firmě Fair Venture. Vystudoval obor ekonomie a politologie na London School of Economics a obor Technology Policy na University of Cambridge."
 
 footer:
-  copyright: "© 2024 Dark Green Solutions. Všechna práva vyhrazena."
-  links:
-    - text: "Služby"
-      url: "#sluzby"
-    - text: "O nás"
-      url: "#o-nas"
-    - text: "Kontakt"
-      url: "#kontakt"
+  contact:
+    title: "Kontakt"
+    company: "Dark Green Solutions s.r.o."
+    street: "Salvátorská 931/8"
+    city: "110 00 Praha 1"
+  billing:
+    title: "Fakturační údaje"
+    company: "Dark Green Solutions s.r.o."
+    street: "Ametystová 285/4"
+    city: "153 00 Praha 5, Radotín"
+    ico: "IČ: 22375902"
+  copyright: "(c) DarkGreen Solutions s.r.o. 2025"
 ---
-

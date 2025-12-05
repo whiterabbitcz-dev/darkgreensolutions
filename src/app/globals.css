@@ -1,7 +1,7 @@
 @import "tailwindcss";
 
 :root {
-  --font-inter: "Inter", sans-serif;
+  --font-inter: "Inter", system-ui, sans-serif;
 }
 
 html {
@@ -14,37 +14,15 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
-/* Custom scrollbar */
-::-webkit-scrollbar {
-  width: 8px;
+/* Reset default margins */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-::-webkit-scrollbar-track {
-  background: #1a1a1a;
-}
-
-::-webkit-scrollbar-thumb {
-  background: #9ff618;
-  border-radius: 4px;
-}
-
-::-webkit-scrollbar-thumb:hover {
-  background: #7bc712;
-}
-
-/* Selection styling */
+/* Custom selection */
 ::selection {
-  background-color: rgba(159, 246, 24, 0.3);
-  color: #ffffff;
-}
-
-/* Custom focus styles */
-*:focus-visible {
-  outline: 2px solid #9ff618;
-  outline-offset: 2px;
-}
-
-/* Smooth transitions for interactive elements */
-a, button {
-  transition: all 0.2s ease-in-out;
+  background-color: rgba(124, 58, 237, 0.3);
+  color: #0d0d0d;
 }

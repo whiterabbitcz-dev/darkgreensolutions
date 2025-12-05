@@ -1,44 +1,30 @@
 # Decap CMS Configuration for DarkGreen Solutions
-# https://decapcms.org/docs/configuration-options/
-
 backend:
   name: git-gateway
   branch: main
 
-# For local development, uncomment the following:
+# For local development, uncomment:
 # local_backend: true
 
-# Media files configuration
-media_folder: "public/images/uploads"
-public_folder: "/images/uploads"
+media_folder: "public/images"
+public_folder: "/images"
 
-# Site URL for preview
 site_url: https://www.darkgreensolutions.cz
-
-# Display URL in the top bar
 display_url: https://www.darkgreensolutions.cz
 
-# Logo for CMS sidebar
-logo_url: /images/logo.png
-
-# Slug configuration
 slug:
   encoding: "ascii"
   clean_accents: true
   sanitize_replacement: "-"
 
-# Collections configuration
 collections:
-  # Pages collection - editable page content
   - name: "pages"
     label: "Stránky"
     files:
-      # Home page
       - name: "home"
         label: "Hlavní stránka"
         file: "content/pages/home.md"
         fields:
-          # General page info
           - { name: "title", label: "Název stránky", widget: "string" }
           - { name: "description", label: "Meta popis", widget: "text" }
 
@@ -49,112 +35,75 @@ collections:
             collapsed: true
             fields:
               - { name: "title", label: "Hlavní nadpis", widget: "string" }
-              - { name: "subtitle", label: "Podnadpis", widget: "text" }
-              - { name: "image", label: "Obrázek na pozadí", widget: "image", required: false }
-              - { name: "ctaText", label: "Text CTA tlačítka", widget: "string" }
-              - { name: "ctaLink", label: "Odkaz CTA tlačítka", widget: "string" }
+
+          # Themes Section
+          - name: "themes"
+            label: "Naše témata"
+            widget: "object"
+            collapsed: true
+            fields:
+              - { name: "sectionLabel", label: "Popisek sekce", widget: "string" }
+              - name: "items"
+                label: "Témata"
+                widget: "list"
+                summary: "{{fields.title}}"
+                fields:
+                  - { name: "title", label: "Název", widget: "string" }
+                  - { name: "text", label: "Popis", widget: "text" }
 
           # About Section
           - name: "about"
-            label: "O nás sekce"
+            label: "O nás"
             widget: "object"
             collapsed: true
             fields:
+              - { name: "sectionLabel", label: "Popisek sekce", widget: "string" }
               - { name: "title", label: "Nadpis", widget: "string" }
-              - { name: "text", label: "Text", widget: "text" }
-              - { name: "image", label: "Obrázek", widget: "image", required: false }
-
-          # Workflow Section
-          - name: "workflow"
-            label: "Jak pracujeme"
-            widget: "object"
-            collapsed: true
-            fields:
-              - { name: "title", label: "Nadpis", widget: "string" }
-              - { name: "subtitle", label: "Podnadpis", widget: "text" }
-              - name: "steps"
-                label: "Kroky"
+              - name: "paragraphs"
+                label: "Odstavce"
                 widget: "list"
-                summary: "{{fields.title}}"
                 fields:
-                  - { name: "title", label: "Název kroku", widget: "string" }
-                  - { name: "description", label: "Popis", widget: "text" }
-                  - name: "icon"
-                    label: "Ikona"
-                    widget: "select"
-                    options:
-                      - { label: "Hledání", value: "search" }
-                      - { label: "Cíl", value: "target" }
-                      - { label: "Raketa", value: "rocket" }
-                      - { label: "Dokument", value: "file-text" }
+                  - { name: "text", label: "Text", widget: "text" }
+                  - { name: "bold", label: "Tučné", widget: "boolean", required: false }
+                  - { name: "underline", label: "Podtržené", widget: "boolean", required: false }
 
-          # Services Section
-          - name: "services"
-            label: "Služby"
+          # Consultants Section
+          - name: "consultants"
+            label: "Konzultanti"
             widget: "object"
             collapsed: true
             fields:
-              - { name: "title", label: "Nadpis", widget: "string" }
-              - { name: "subtitle", label: "Podnadpis", widget: "text" }
-              - name: "items"
-                label: "Služby"
-                widget: "list"
-                summary: "{{fields.title}}"
-                fields:
-                  - { name: "title", label: "Název služby", widget: "string" }
-                  - { name: "text", label: "Popis", widget: "text" }
-                  - name: "icon"
-                    label: "Ikona"
-                    widget: "select"
-                    options:
-                      - { label: "Graf", value: "bar-chart" }
-                      - { label: "List", value: "leaf" }
-                      - { label: "Kompas", value: "compass" }
-                      - { label: "Štít", value: "shield-check" }
-
-          # Team Section
-          - name: "team"
-            label: "Tým"
-            widget: "object"
-            collapsed: true
-            fields:
-              - { name: "title", label: "Nadpis", widget: "string" }
-              - { name: "subtitle", label: "Podnadpis", widget: "string" }
-              - { name: "description", label: "Popis", widget: "text" }
+              - { name: "title", label: "Nadpis sekce", widget: "string" }
               - name: "members"
-                label: "Členové týmu"
+                label: "Členové"
                 widget: "list"
-                summary: "{{fields.name}} - {{fields.role}}"
+                summary: "{{fields.name}}"
                 fields:
                   - { name: "name", label: "Jméno", widget: "string" }
-                  - { name: "role", label: "Pozice", widget: "string" }
-                  - { name: "image", label: "Fotka", widget: "image", required: false }
+                  - { name: "image", label: "Fotka", widget: "image" }
+                  - { name: "bio", label: "Životopis", widget: "text" }
 
-          # Contact Section
-          - name: "contact"
-            label: "Kontakt"
-            widget: "object"
-            collapsed: true
-            fields:
-              - { name: "title", label: "Nadpis", widget: "string" }
-              - { name: "subtitle", label: "Podnadpis", widget: "text" }
-              - { name: "email", label: "Email", widget: "string" }
-              - { name: "phone", label: "Telefon", widget: "string" }
-              - { name: "address", label: "Adresa", widget: "string" }
-              - { name: "formTitle", label: "Nadpis formuláře", widget: "string" }
-
-          # Footer Section
+          # Footer
           - name: "footer"
             label: "Patička"
             widget: "object"
             collapsed: true
             fields:
-              - { name: "copyright", label: "Copyright text", widget: "string" }
-              - name: "links"
-                label: "Odkazy"
-                widget: "list"
-                summary: "{{fields.text}}"
+              - name: "contact"
+                label: "Kontakt"
+                widget: "object"
                 fields:
-                  - { name: "text", label: "Text odkazu", widget: "string" }
-                  - { name: "url", label: "URL", widget: "string" }
-
+                  - { name: "title", label: "Nadpis", widget: "string" }
+                  - { name: "company", label: "Firma", widget: "string" }
+                  - { name: "street", label: "Ulice", widget: "string" }
+                  - { name: "city", label: "Město", widget: "string" }
+              - name: "billing"
+                label: "Fakturační údaje"
+                widget: "object"
+                fields:
+                  - { name: "title", label: "Nadpis", widget: "string" }
+                  - { name: "company", label: "Firma", widget: "string" }
+                  - { name: "street", label: "Ulice", widget: "string" }
+                  - { name: "city", label: "Město", widget: "string" }
+                  - { name: "ico", label: "IČ", widget: "string" }
+              - { name: "copyright", label: "Copyright", widget: "string" }
