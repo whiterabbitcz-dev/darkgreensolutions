@@ -53,15 +53,17 @@ export default function Home() {
       >
         {/* Gradient overlay - purple to lime green */}
         <div
-          className="absolute top-0 left-0 w-[65%] h-full"
+          className="absolute top-0 left-0 w-[70%] h-full"
           style={{
             background:
-              "linear-gradient(145deg, rgba(124, 58, 237, 0.95) 0%, rgba(158, 240, 26, 0.8) 60%, transparent 100%)",
+              "linear-gradient(135deg, rgba(124, 58, 237, 1) 0%, rgba(158, 240, 26, 0.9) 70%, transparent 100%)",
           }}
         />
 
         <div className="relative max-w-7xl mx-auto px-6 lg:px-8 py-16 lg:py-24">
-          <h1 className="text-white text-[32px] md:text-[40px] lg:text-[48px] font-bold leading-[1.15] max-w-lg">
+          <h1 
+            className="text-white text-[32px] md:text-[40px] lg:text-[48px] font-bold leading-[1.15] max-w-lg font-serif"
+          >
             {content.hero.title}
           </h1>
         </div>
@@ -93,7 +95,7 @@ export default function Home() {
                 )}
                 <div className={index === 0 ? "pl-5" : ""}>
                   <h3
-                    className="text-[26px] md:text-[30px] font-bold mb-3"
+                    className="text-[26px] md:text-[30px] font-bold mb-3 font-serif"
                     style={{ color: "#0D0D0D" }}
                   >
                     {item.title}
@@ -124,7 +126,7 @@ export default function Home() {
 
           {/* Main Heading */}
           <h2
-            className="text-[28px] md:text-[36px] lg:text-[40px] font-bold leading-tight mb-6 max-w-2xl"
+            className="text-[28px] md:text-[36px] lg:text-[40px] font-bold leading-tight mb-6 max-w-2xl font-serif"
             style={{ color: "#0D0D0D" }}
           >
             {content.about.title}
@@ -157,37 +159,34 @@ export default function Home() {
       <section className="py-14 lg:py-16" style={{ backgroundColor: "#7C3AED" }}>
         <div className="max-w-7xl mx-auto px-6 lg:px-8">
           {/* Section Title */}
-          <h2 className="text-white text-[24px] md:text-[28px] font-bold mb-10 text-center">
+          <h2 className="text-white text-[24px] md:text-[28px] font-bold mb-10 text-center font-serif">
             {content.consultants.title}
           </h2>
 
           {/* Consultants */}
-          <div className="space-y-14">
+          <div className="space-y-16">
             {content.consultants.members.map((member, index) => (
               <div key={index}>
                 {/* Name */}
                 <h3
-                  className="text-[22px] md:text-[26px] font-bold mb-4"
+                  className="text-[22px] md:text-[26px] font-bold mb-4 font-serif"
                   style={{ color: "#9EF01A" }}
                 >
                   {member.name}
                 </h3>
 
-                {/* Photo - portrait aspect ratio like in reference */}
+                {/* Photo - larger size with proper aspect ratio */}
                 <div className="mb-5">
                   <div
-                    className="w-36 md:w-44 rounded-lg overflow-hidden"
-                    style={{ 
-                      backgroundColor: "#6D28D9",
-                      aspectRatio: "3/4"
-                    }}
+                    className="w-[160px] h-[200px] md:w-[180px] md:h-[225px] rounded-lg overflow-hidden relative"
+                    style={{ backgroundColor: "#6D28D9" }}
                   >
                     <Image
                       src={member.image}
                       alt={member.name}
-                      width={176}
-                      height={235}
-                      className="w-full h-full object-cover object-top"
+                      fill
+                      className="object-cover object-top"
+                      sizes="(max-width: 768px) 160px, 180px"
                       unoptimized
                     />
                   </div>

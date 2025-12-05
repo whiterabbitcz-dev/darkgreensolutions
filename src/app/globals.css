@@ -9,12 +9,9 @@
   --color-brand-dark: #0D0D0D;
   --color-brand-black: #000000;
   
-  /* Font family */
-  --font-sans: "Inter", system-ui, sans-serif;
-}
-
-:root {
-  --font-inter: "Inter", system-ui, sans-serif;
+  /* Font families */
+  --font-sans: var(--font-inter), "Inter", system-ui, sans-serif;
+  --font-serif: var(--font-playfair), "Playfair Display", Georgia, serif;
 }
 
 html {
@@ -22,7 +19,6 @@ html {
 }
 
 body {
-  font-family: var(--font-inter);
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
