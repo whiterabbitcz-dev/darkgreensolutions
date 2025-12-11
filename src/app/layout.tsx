@@ -3,21 +3,19 @@ import { Inter, Playfair_Display } from "next/font/google";
 import "./globals.css";
 
 const inter = Inter({
-  subsets: ["latin", "latin-ext"],
   variable: "--font-inter",
-  display: "swap",
+  subsets: ["latin"],
 });
 
 const playfair = Playfair_Display({
-  subsets: ["latin", "latin-ext"],
   variable: "--font-playfair",
-  display: "swap",
+  subsets: ["latin"],
+  weight: ["400", "600", "700", "900"],
 });
 
 export const metadata: Metadata = {
-  title: "DarkGreen Solutions | Technologie a postupy pro udržitelné podnikání",
-  description:
-    "Navrhneme a spočítáme cestu k dekarbonizaci vašeho podnikání. Nastavíme vaše procesy a reporting dle principů ESG.",
+  title: "DarkGreen Solutions - Technologie a postupy pro udržitelné podnikání",
+  description: "Propojujeme technologie, byznys a společnost. ESG reporting, dekarbonizace a strategie udržitelnosti.",
 };
 
 export default function RootLayout({
@@ -26,8 +24,12 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="cs" className={`${inter.variable} ${playfair.variable}`}>
-      <body className="font-sans antialiased">{children}</body>
+    <html lang="cs" className="scroll-smooth">
+      <body
+        className={`${inter.variable} ${playfair.variable} antialiased`}
+      >
+        {children}
+      </body>
     </html>
   );
 }
