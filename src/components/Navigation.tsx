@@ -23,9 +23,6 @@ export default function Navigation() {
             <Link href="#tym" className="hover:text-green-400 transition-colors">
               Tým
             </Link>
-            <Link href="#blog" className="hover:text-green-400 transition-colors">
-              Blog
-            </Link>
             <Link href="#kontakt" className="hover:text-green-400 transition-colors">
               Kontakt
             </Link>
