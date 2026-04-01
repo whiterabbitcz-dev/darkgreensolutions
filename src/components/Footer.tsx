@@ -1,5 +1,6 @@
-import Image from "next/image";
 import Link from "next/link";
+
+const basePath = process.env.NEXT_PUBLIC_BASE_PATH || "";
 
 export default function Footer() {
   return (
@@ -9,8 +10,8 @@ export default function Footer() {
           {/* Logo */}
           <div>
             <Link href="/" className="inline-block mb-6">
-              <Image
-                src="/images/logo.jpg"
+              <img
+                src={`${basePath}/images/logo.jpg`}
                 alt="DarkGreen Solutions"
                 width={150}
                 height={40}

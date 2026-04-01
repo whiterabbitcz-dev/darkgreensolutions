@@ -1,5 +1,6 @@
-import Image from "next/image";
 import Link from "next/link";
+
+const basePath = process.env.NEXT_PUBLIC_BASE_PATH || "";
 
 export default function Navigation() {
   return (
@@ -7,8 +8,8 @@ export default function Navigation() {
       <div className="max-w-7xl mx-auto px-6 py-4">
         <div className="flex items-center justify-between">
           <Link href="/" className="flex items-center">
-            <Image
-              src="/images/logo.jpg"
+            <img
+              src={`${basePath}/images/logo.jpg`}
               alt="DarkGreen Solutions"
               width={150}
               height={40}

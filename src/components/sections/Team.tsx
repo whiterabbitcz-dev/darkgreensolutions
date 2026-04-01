@@ -1,4 +1,4 @@
-import Image from "next/image";
+const basePath = process.env.NEXT_PUBLIC_BASE_PATH || "";
 
 export default function Team() {
   return (
@@ -14,11 +14,10 @@ export default function Team() {
             <h3 className="text-3xl md:text-4xl font-bold font-serif">Jaroslav Smrčka</h3>
             
             <div className="relative w-64 h-64 md:w-80 md:h-80 rounded-lg overflow-hidden">
-              <Image
-                src="/images/jaroslavsmrcka.png"
+              <img
+                src={`${basePath}/images/jaroslavsmrcka.png`}
                 alt="Jaroslav Smrčka"
-                fill
-                className="object-cover"
+                className="absolute inset-0 w-full h-full object-cover"
               />
             </div>
             
@@ -32,11 +31,10 @@ export default function Team() {
             <h3 className="text-3xl md:text-4xl font-bold font-serif">Jan Baláč</h3>
             
             <div className="relative w-64 h-64 md:w-80 md:h-80 rounded-lg overflow-hidden">
-              <Image
-                src="/images/janbalac.png"
+              <img
+                src={`${basePath}/images/janbalac.png`}
                 alt="Jan Baláč"
-                fill
-                className="object-cover"
+                className="absolute inset-0 w-full h-full object-cover"
               />
             </div>
             

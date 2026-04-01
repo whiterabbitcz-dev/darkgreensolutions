@@ -1,10 +1,15 @@
 import type { NextConfig } from "next";
 
+const basePath = "/darkgreensolutions";
+
 const nextConfig: NextConfig = {
   output: "export",
-  basePath: "/darkgreensolutions",
+  basePath,
   images: {
     unoptimized: true,
+  },
+  env: {
+    NEXT_PUBLIC_BASE_PATH: basePath,
   },
 };
 
